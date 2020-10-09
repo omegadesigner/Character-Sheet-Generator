@@ -7,10 +7,12 @@
 An app that allows users to generate character sheets for various homebrew campaigns, and any other reasons they might want to have a custom character sheet. The Apple have several sample buttons that will allow the user to start with pre-generated information and then edit and save that information to create their character. If they wish they can also start with a blank character sheet and create a completely custom character from scratch.
 
 ## Wireframes
-
+![Wireframe Decktop](https://i.imgur.com/e1nke9r.jpg)
+![Wireframe Tablet](https://i.imgur.com/b92czmW.jpg)
+![Wireframe Mobile](https://i.imgur.com/CoxAiVc.jpg)
 
 ## Component Hierarchy
-
+![Hierarchy](https://i.imgur.com/VOLxRC2.jpg)
 
 ## API and Data Sample
 
