@@ -18,16 +18,22 @@ An app that allows users to generate character sheets for various homebrew campa
 
 ## API and Data Sample
 
-```{
+```
+{
     "records": [
         {
             "id": "recFwQTPvGnbXMWow",
             "fields": {
                 "characterName": "Dern",
-                "race": "Dwarf",
                 "class": "Cleric",
-                "baseStats": "{str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10}",
-                "characterLevel": "5"
+                "characterLevel": "5",
+                "race": "Dwarf",
+                "dex": "10",
+                "str": "10",
+                "con": "10",
+                "int": "10",
+                "wis": "10",
+                "cha": "10"
             },
             "createdTime": "2020-10-08T20:02:53.000Z"
         },
