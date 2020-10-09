@@ -95,3 +95,5 @@ I am very weak when it comes to CSS and styling so creating a character sheet la
 I think that this will be a fun project that integrates things that I love to do in my free time with practical skill applications.
 ### Threats:
 Imposter syndrome, general procrastination.
+
+[Issue Ticket](https://forms.gle/CiYgaUhh24Sz35RRA)
