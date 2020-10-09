@@ -81,7 +81,7 @@ An app that allows users to generate character sheets for various homebrew campa
 | Creating sample sheets | M | 3hrs| N/A | N/A |
 | Calculator components | H | 4hrs| N/A | N/A |
 | Drop-down integration | H | 4hrs| N/A | N/A |
-| Total | H | 6hrs| N/A | N/A |
+| Total | H | 33hrs| N/A | N/A |
 
 ## SWOT Analysis
 
