@@ -14,7 +14,7 @@ An app that allows users to generate character sheets for various homebrew campa
 ![Wireframe Mobile](https://i.imgur.com/CoxAiVc.jpg)
 
 ## Component Hierarchy
-![Hierarchy](https://i.imgur.com/cQgpGol.jpg)
+![Hierarchy](https://i.imgur.com/LWGsKAH.jpg)
 
 ## API and Data Sample
 
