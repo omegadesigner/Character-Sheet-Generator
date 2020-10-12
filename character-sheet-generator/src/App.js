@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import Skills from './components/Skills';
+import Programs from './components/Programs';
 import Equipment from './components/Equipment';
 import Weapons from './components/Weapons';
 import Samples from './components/Samples';
+import Sheet from './components/Sheet';
 import Navbar from './components/Navbar';
 import axios from 'axios';
 import './App.css';
