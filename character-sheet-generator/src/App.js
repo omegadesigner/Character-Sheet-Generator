@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 // import Samples from './components/Samples';
 import Sheet from './components/Sheet';
 import Navbar from './components/Navbar';
+import { Route, Link } from "react-router-dom";
 import axios from 'axios';
 import './App.css';
 
@@ -16,7 +17,8 @@ class App extends Component {
       programs: {},
       equipment: {},
       weapons: {},
-      samples: {}
+      samples: {},
+      classes: {}
     }
   }
   async grabRulebook()
@@ -53,10 +55,19 @@ class App extends Component {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       });
+      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/classes`;
+      const respClasses = await axios.get(airtableURL, 
+      {
+        headers: 
+        {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+        }
+      });
       this.setState({programs: respPrograms.records})
       this.setState({equipment: respEquipminet.records})
       this.setState({weapons: respWeapons.records})
       this.setState({samples: respSamples.records})
+      this.setState({classes: respClasses.records})
   }
   render()
   {
@@ -64,14 +75,16 @@ class App extends Component {
       <div className="App">
         <div>
           <Navbar 
-            programs={this.state.programs}
-            equipment={this.state.equipment}
-            weapons={this.state.weapons} 
             samples={this.state.samples}
           />
         </div>
         <div>
-          <Sheet />
+          <Sheet 
+            programs={this.state.programs}
+            equipment={this.state.equipment}
+            weapons={this.state.weapons}
+            classes={this.state.classes}
+          />
         </div>
       </div>
     );

@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import { Route, Link } from "react-router-dom";
 
-class Navbar extends Component {
-    constructor()
+class CharacterClass extends Component {
+    constructor(props)
     {
-        super();
+        super(props);
         this.state = {
         }
     }
@@ -18,4 +17,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default CharacterClass;

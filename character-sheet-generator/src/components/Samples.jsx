@@ -7,6 +7,7 @@ class Samples extends Component {
         this.state = {
         }
     }
+    
     render()
     {
         return (
