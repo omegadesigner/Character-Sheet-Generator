@@ -34,7 +34,14 @@
 #Navbar {
   grid-area: navbar;
 }
-
+#Navbar div {
+  border: 1px solid black;
+  display: flex;
+  max-width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #Options {
   grid-area: options;
 }

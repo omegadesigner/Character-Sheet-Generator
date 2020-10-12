@@ -53,7 +53,9 @@ class App extends Component {
     return (
       <div className="layout">
         <div id="Navbar">
-          Navbar
+          <Navbar 
+            sampleSheets={this.state.sampleSheets}
+          />
         </div>
         <div id="Options">
           Options
@@ -71,11 +73,7 @@ class App extends Component {
 
 export default App;
 
-{/* <Navbar 
-      sampleSheets={this.state.sampleSheets}
-    />
-    </div>
-    <div>
+{/* 
     <Sheet 
       programs={this.state.programs}
       equipment={this.state.equipment}
