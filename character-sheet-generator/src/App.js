@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Programs from './components/Programs';
-import Equipment from './components/Equipment';
-import Weapons from './components/Weapons';
-import Samples from './components/Samples';
+// import Programs from './components/Programs';
+// import Equipment from './components/Equipment';
+// import Weapons from './components/Weapons';
+// import Samples from './components/Samples';
 import Sheet from './components/Sheet';
 import Navbar from './components/Navbar';
 import axios from 'axios';
@@ -53,16 +53,26 @@ class App extends Component {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       });
-      this.setState({programs: respPrograms.data})
-      this.setState({equipment: respEquipminet.data})
-      this.setState({weapons: respWeapons.data})
-      this.setState({samples: respSamples.data})
+      this.setState({programs: respPrograms.records})
+      this.setState({equipment: respEquipminet.records})
+      this.setState({weapons: respWeapons.records})
+      this.setState({samples: respSamples.records})
   }
   render()
   {
     return (
       <div className="App">
-
+        <div>
+          <Navbar 
+            programs={this.state.programs}
+            equipment={this.state.equipment}
+            weapons={this.state.weapons} 
+            samples={this.state.samples}
+          />
+        </div>
+        <div>
+          <Sheet />
+        </div>
       </div>
     );
   }

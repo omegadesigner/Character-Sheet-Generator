@@ -3,18 +3,18 @@ import React, {Component} from 'react';
 class Navbar extends Component {
     constructor()
     {
-      super();
-      this.state = {
-      }
+        super();
+        this.state = {
+        }
     }
     render()
-  {
-    return (
-      <div>
+    {
+        return (
+            <div>
 
-      </div>
-    );
-  }
+            </div>
+        );
+    }
 }
 
 export default Navbar;
