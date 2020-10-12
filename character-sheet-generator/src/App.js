@@ -18,7 +18,8 @@ class App extends Component {
       equipment: {},
       weapons: {},
       samples: {},
-      classes: {}
+      classes: {},
+      races: {}
     }
   }
   async grabRulebook()
@@ -63,11 +64,20 @@ class App extends Component {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
         }
       });
+      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/races`;
+      const respRaces = await axios.get(airtableURL, 
+      {
+        headers: 
+        {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+        }
+      });
       this.setState({programs: respPrograms.records})
       this.setState({equipment: respEquipminet.records})
       this.setState({weapons: respWeapons.records})
       this.setState({samples: respSamples.records})
       this.setState({classes: respClasses.records})
+      this.setState({races: respRaces.records})
   }
   render()
   {
