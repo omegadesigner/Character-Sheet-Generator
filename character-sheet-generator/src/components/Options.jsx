@@ -12,8 +12,9 @@ class Navbar extends Component {
     {
         return (
             <div>
-                <Link to="/create-new"><button>Create New</button></Link>
-                
+                <Link to="/build"><button>Build</button></Link>
+                <Link to="/info"><button>Info</button></Link>
+                <Link to="/notes"><button>Notes</button></Link>
             </div>
         );
     }

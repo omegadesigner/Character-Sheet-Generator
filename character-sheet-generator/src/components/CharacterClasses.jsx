@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 
-class CharacterClass extends Component {
+class CharacterClasses extends Component {
     constructor(props)
     {
         super(props);
         this.state = {
         }
     }
+    
     render()
     {
         return (
@@ -17,4 +18,4 @@ class CharacterClass extends Component {
     }
 }
 
-export default CharacterClass;
+export default CharacterClasses;

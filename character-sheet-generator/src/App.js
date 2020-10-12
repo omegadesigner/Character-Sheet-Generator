@@ -14,87 +14,55 @@ class App extends Component {
   {
     super();
     this.state = {
-      programs: {},
-      equipment: {},
-      weapons: {},
-      samples: {},
-      classes: {},
-      races: {}
+      programs: [],
+      equipment: [],
+      weapons: [],
+      sampleSheets: [],
+      classes: [],
+      races: []
     }
   }
+
   async grabRulebook()
   {
-    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/programs`;
-      const respPrograms = await axios.get(airtableURL, 
+    const tables = Object.keys(this.state)
+    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/`;
+    tables.forEach((table, i) =>
+    {
+      setTimeout(async () => 
       {
-        headers: 
+        const response = await axios.get(`${airtableURL}${table}`, 
         {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
-        }
-      });
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/equipment`;
-      const respEquipminet = await axios.get(airtableURL, 
-      {
-        headers: 
-        {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
-        }
-      });
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/weapons`;
-      const respWeapons = await axios.get(airtableURL, 
-      {
-        headers: 
-        {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
-        }
-      });
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/sampleSheets`;
-      const respSamples = await axios.get(airtableURL, 
-      {
-        headers: 
-        {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
-        }
-      });
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/classes`;
-      const respClasses = await axios.get(airtableURL, 
-      {
-        headers: 
-        {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
-        }
-      });
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/races`;
-      const respRaces = await axios.get(airtableURL, 
-      {
-        headers: 
-        {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
-        }
-      });
-      this.setState({programs: respPrograms.records})
-      this.setState({equipment: respEquipminet.records})
-      this.setState({weapons: respWeapons.records})
-      this.setState({samples: respSamples.records})
-      this.setState({classes: respClasses.records})
-      this.setState({races: respRaces.records})
+          headers: 
+          {
+            Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+          }
+        });
+        this.setState({[table]: response.data.records});
+      }, 200 *(i + 1));
+    })
   }
+
+  async componentDidMount()
+  {
+    await this.grabRulebook();
+  }
+
   render()
   {
     return (
-      <div className="App">
-        <div>
-          <Navbar 
-            samples={this.state.samples}
-          />
+      <div className="layout">
+        <div id="Navbar">
+          Navbar
         </div>
-        <div>
-          <Sheet 
-            programs={this.state.programs}
-            equipment={this.state.equipment}
-            weapons={this.state.weapons}
-            classes={this.state.classes}
-          />
+        <div id="Options">
+          Options
+        </div>
+        <div id="CreatedCharacters">
+          Created Characters
+        </div>
+        <div id="CharacterSheet">
+          Character Sheet
         </div>
       </div>
     );
@@ -102,3 +70,16 @@ class App extends Component {
 }
 
 export default App;
+
+{/* <Navbar 
+      sampleSheets={this.state.sampleSheets}
+    />
+    </div>
+    <div>
+    <Sheet 
+      programs={this.state.programs}
+      equipment={this.state.equipment}
+      weapons={this.state.weapons}
+      classes={this.state.classes}
+      races={this.state.races}
+    /> */}

@@ -1,3 +1,51 @@
-.App {
-  text-align: center;
+#Navbar, #Options, #CreatedCharacters, #CharacterSheet {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
+.layout {
+  display: grid;
+  max-width: 90vw;
+  min-height: 90vw;
+  grid-gap: 10px;
+  margin: 0 auto;
+  grid-template-areas: 
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+}
+
+#Navbar {
+  grid-area: navbar;
+}
+
+#Options {
+  grid-area: options;
+}
+
+#CreatedCharacters {
+  grid-area: created;
+}
+
+#CharacterSheet {
+  grid-area: charSheet;
+}
+
+
+

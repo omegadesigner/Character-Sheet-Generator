@@ -5,6 +5,7 @@ class Races extends Component {
     {
         super(props);
         this.state = {
+            races: {}
         }
     }
     render()
