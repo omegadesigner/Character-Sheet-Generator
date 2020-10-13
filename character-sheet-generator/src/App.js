@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Navbar from './components/Navbar';
 import Options from './components/Options';
 import Sheet from './components/Sheet';
-import { Route, Link } from "react-router-dom";
 import axios from 'axios';
 import './App.css';
 
@@ -61,7 +60,13 @@ class App extends Component {
           Created Characters
         </div>
         <div id="CharacterSheet">
-          <Sheet />
+          <Sheet 
+            programs={this.state.programs}
+            equipment={this.state.equipment}
+            weapons={this.state.weapons}
+            classes={this.state.classes}
+            races={this.state.races}
+          />
         </div>
       </div>
     );
@@ -69,12 +74,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/* 
-    <Sheet 
-      programs={this.state.programs}
-      equipment={this.state.equipment}
-      weapons={this.state.weapons}
-      classes={this.state.classes}
-      races={this.state.races}
-    /> */}
