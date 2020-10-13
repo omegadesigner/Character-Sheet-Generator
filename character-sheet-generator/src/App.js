@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-// import Programs from './components/Programs';
-// import Equipment from './components/Equipment';
-// import Weapons from './components/Weapons';
-// import Samples from './components/Samples';
-import Sheet from './components/Sheet';
 import Navbar from './components/Navbar';
+import Options from './components/Options';
+import Sheet from './components/Sheet';
 import { Route, Link } from "react-router-dom";
 import axios from 'axios';
 import './App.css';
@@ -51,20 +48,20 @@ class App extends Component {
   render()
   {
     return (
-      <div className="layout">
+      <div className="appLayout">
         <div id="Navbar">
           <Navbar 
             sampleSheets={this.state.sampleSheets}
           />
         </div>
         <div id="Options">
-          Options
+          <Options />
         </div>
         <div id="CreatedCharacters">
           Created Characters
         </div>
         <div id="CharacterSheet">
-          Character Sheet
+          <Sheet />
         </div>
       </div>
     );

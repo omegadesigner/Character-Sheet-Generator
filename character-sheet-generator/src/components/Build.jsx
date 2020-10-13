@@ -10,8 +10,8 @@ class Build extends Component {
     render()
     {
         return (
-            <div>
-
+            <div id="Build">
+                <h1>Build</h1>
             </div>
         );
     }

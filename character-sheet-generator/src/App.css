@@ -1,4 +1,5 @@
-#Navbar, #Options, #CreatedCharacters, #CharacterSheet {
+#Navbar, #Options, #CreatedCharacters, #CharacterSheet, 
+#CharacterHeader, #CharacterStats, #CharacterOptions {
   border: 1px solid black;
   display: flex;
   flex-direction: row;
@@ -6,7 +7,7 @@
   align-items: center;
 }
 
-.layout {
+.appLayout {
   display: grid;
   max-width: 90vw;
   min-height: 90vw;
@@ -35,15 +36,38 @@
   grid-area: navbar;
 }
 #Navbar div {
-  border: 1px solid black;
-  display: flex;
-  max-width: 90%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  min-width: 90%;
+  min-height: 90%;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
+#Navbar div a {
+  border: 1px solid black;
+  display: grid;
+  min-width: 70%;
+  max-height: 50%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
 #Options {
   grid-area: options;
+}
+#Options div {
+  display: grid;
+  min-width: 90%;
+  min-height: 80%;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+#Options a {
+  border: 1px solid black;
+  display: grid;
+  min-width: 70%;
+  max-height: 50%;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
 #CreatedCharacters {
@@ -54,5 +78,89 @@
   grid-area: charSheet;
 }
 
+.sheetLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  grid-gap: 10px;
+  margin: 0 auto;
+  grid-template-areas:
+    "header header header header header header header header"
+    "cStats cStats cStats cStats cStats cStats cStats cStats"
+    "cStats cStats cStats cStats cStats cStats cStats cStats"
+    "option option option option option option option option"
+    "option option option option option option option option"
+    "option option option option option option option option"
+    "option option option option option option option option"
+    "option option option option option option option option"
+    "option option option option option option option option"
+    "option option option option option option option option"
+    "option option option option option option option option"
+    "option option option option option option option option"
+}
 
+#CharacterHeader {
+  grid-area: header;
+}
+.sheetHeaderLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  /* grid-gap: 10px; */
+  margin: 0 auto;
+  grid-template-areas:
+    "name name name name race race class class level level"
+}
+.name {
+  grid-area: name;
+  border-bottom: 2px solid black;
+  min-width: 40%;
+  min-height: 50%;
+}
+.race {
+  grid-area: race;
+}
+.class {
+  grid-area: class;
+}
+.level {
+  grid-area: level;
+}
+.race, .class, .level {
+  border-bottom: 2px solid black;
+  min-width: 20%;
+  min-height: 50%;
+  text-align: center;
+}
 
+#CharacterStats {
+  grid-area: cStats;
+}
+.sheetStatLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  grid-gap: 5px;
+  margin: 0 auto;
+  grid-template-areas:
+    "stat stat stat stat stat stat health health"
+}
+
+.str, .dex, .mat, .tech, .int, .cha {
+  grid-area: stat;
+  border: 1px solid black;
+  min-width: 12%;
+  min-height: 50%;
+  text-align: center;
+}
+.health {
+  grid-area: health;
+  border: 1px solid black;
+  min-width: 20%;
+  min-height: 50%;
+  text-align: center;
+}
+
+#CharacterOptions {
+  grid-area: option;
+}
