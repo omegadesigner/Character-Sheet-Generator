@@ -24,13 +24,13 @@ class Sheet extends Component {
                     <h4 className="level">Level</h4>
                 </div>
                 <div id="CharacterStats" className="sheetStatLayout">
-                    <div className="str">STR</div>
-                    <div className="dex">DEX</div>
-                    <div className="mat">MAT</div>
-                    <div className="tech">TECH</div>
-                    <div className="int">INT</div>
-                    <div className="cha">CHA</div>
-                    <div className="health">HEALTH</div>
+                    <h4 className="str">STR</h4>
+                    <h4 className="dex">DEX</h4>
+                    <h4 className="mat">MAT</h4>
+                    <h4 className="tech">TECH</h4>
+                    <h4 className="int">INT</h4>
+                    <h4 className="cha">CHA</h4>
+                    <h4 className="health">HEALTH</h4>
                 </div>
                 <div id="CharacterOptions">
                     <Route path="/build">

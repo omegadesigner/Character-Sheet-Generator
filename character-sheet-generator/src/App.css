@@ -1,5 +1,8 @@
-#Navbar, #Options, #CreatedCharacters, #CharacterSheet, 
-#CharacterHeader, #CharacterStats, #CharacterOptions {
+#Navbar, #Options, #CreatedCharacters,
+#CharacterSheet, #CharacterHeader,
+#CharacterStats, #CharacterOptions,
+#SkillsList, #EquipmentList,
+#BodyView, #ProgramList {
   border: 1px solid black;
   display: flex;
   flex-direction: row;
@@ -14,27 +17,28 @@
   grid-gap: 10px;
   margin: 0 auto;
   grid-template-areas: 
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "navbar navbar options options charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
-    "created created created created charSheet charSheet charSheet charSheet charSheet charSheet charSheet charSheet"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "NB NB OP OP CS CS CS CS CS CS CS CS"
+    "CC CC CC CC CS CS CS CS CS CS CS CS"
+    "CC CC CC CC CS CS CS CS CS CS CS CS"
+    "CC CC CC CC CS CS CS CS CS CS CS CS"
+    "CC CC CC CC CS CS CS CS CS CS CS CS"
+    "CC CC CC CC CS CS CS CS CS CS CS CS"
+    "CC CC CC CC CS CS CS CS CS CS CS CS"
 }
+#Navbar             {grid-area: NB;}
+#Options            {grid-area: OP;}
+#CreatedCharacters  {grid-area: CC;}
+#CharacterSheet     {grid-area: CS;}
 
-#Navbar {
-  grid-area: navbar;
-}
 #Navbar div {
   display: grid;
   min-width: 90%;
@@ -49,10 +53,6 @@
   max-height: 50%;
   margin: 0 auto;
   text-decoration: none;
-}
-
-#Options {
-  grid-area: options;
 }
 #Options div {
   display: grid;
@@ -70,14 +70,6 @@
   text-decoration: none;
 }
 
-#CreatedCharacters {
-  grid-area: created;
-}
-
-#CharacterSheet {
-  grid-area: charSheet;
-}
-
 .sheetLayout {
   display: grid;
   min-width: 100%;
@@ -85,82 +77,202 @@
   grid-gap: 10px;
   margin: 0 auto;
   grid-template-areas:
-    "header header header header header header header header"
-    "cStats cStats cStats cStats cStats cStats cStats cStats"
-    "cStats cStats cStats cStats cStats cStats cStats cStats"
-    "option option option option option option option option"
-    "option option option option option option option option"
-    "option option option option option option option option"
-    "option option option option option option option option"
-    "option option option option option option option option"
-    "option option option option option option option option"
-    "option option option option option option option option"
-    "option option option option option option option option"
-    "option option option option option option option option"
+    "CH CH CH CH CH CH CH CH"
+    "CS CS CS CS CS CS CS CS"
+    "CS CS CS CS CS CS CS CS"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
+    "CO CO CO CO CO CO CO CO"
 }
+#CharacterHeader  {grid-area: CH;}
+#CharacterStats   {grid-area: CS;}
+#CharacterOptions {grid-area: CO;}
 
-#CharacterHeader {
-  grid-area: header;
-}
-.sheetHeaderLayout {
+.sheetHeadeRRayout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
   /* grid-gap: 10px; */
   margin: 0 auto;
   grid-template-areas:
-    "name name name name race race class class level level"
+    "NM NM NM NM RC RC CL CL LV LV"
 }
+.name   {grid-area: NM;}
+.race   {grid-area: RC;}
+.class  {grid-area: CL;}
+.level  {grid-area: LV;}
+
 .name {
-  grid-area: name;
+  margin: 0 auto;
   border-bottom: 2px solid black;
   min-width: 40%;
   min-height: 50%;
 }
-.race {
-  grid-area: race;
-}
-.class {
-  grid-area: class;
-}
-.level {
-  grid-area: level;
-}
 .race, .class, .level {
+  margin: 0 auto;
   border-bottom: 2px solid black;
   min-width: 20%;
   min-height: 50%;
   text-align: center;
 }
 
-#CharacterStats {
-  grid-area: cStats;
-}
 .sheetStatLayout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
-  grid-gap: 5px;
+  /* grid-gap: 5px; */
   margin: 0 auto;
   grid-template-areas:
-    "stat stat stat stat stat stat health health"
+    "ST ST ST ST ST ST HP HP"
 }
+.str, .dex, .mat    {grid-area: ST;}
+.tech, .int, .cha   {grid-area: ST;}
+.health             {grid-area: HP;}
 
 .str, .dex, .mat, .tech, .int, .cha {
-  grid-area: stat;
+  margin: 0 auto;
   border: 1px solid black;
   min-width: 12%;
   min-height: 50%;
   text-align: center;
 }
 .health {
-  grid-area: health;
+  margin: 0 auto;
   border: 1px solid black;
-  min-width: 20%;
+  min-width: 24%;
   min-height: 50%;
   text-align: center;
 }
 
-#CharacterOptions {
-  grid-area: option;
+.buildLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  /* grid-gap: 5px; */
+  margin: 0 auto;
+  grid-template-areas:
+    "SL EL BV BV BV PL";
+}
+#SkillsList     {grid-area: SL;}
+#EquipmentList  {grid-area: EL;}
+#BodyView       {grid-area: BV;}
+#ProgramList    {grid-area: PL;}
+
+.skillsLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  /* grid-gap: 5px; */
+  margin: 0 auto;
+  grid-template-areas:
+    "SK";
+}
+.skills         {grid-area: SK;}
+
+.equipmentLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  /* grid-gap: 5px; */
+  margin: 0 auto;
+  grid-template-areas:
+    "HS HS"
+    "FS FS"
+    "BS BS"
+    "TS TS"
+    "AS AS"
+    "HL HL"
+    "HR HR"
+    "LS LS"
+    "FW FW";
+}
+.headSlot       {grid-area: HS;}
+.faceSlot       {grid-area: FS;}
+.backSlot       {grid-area: BS;}
+.torsoSlot      {grid-area: TS;}
+.armsSlot       {grid-area: AS;}
+.leftHandSlot   {grid-area: HL;}
+.rightHandSlot  {grid-area: HR;}
+.legsSlot       {grid-area: LS;}
+.footwearSlot   {grid-area: FW;}
+
+.bodyLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  /* grid-gap: 5px; */
+  margin: 0 auto;
+  grid-template-areas:
+    ".  .  .  HD HD HD .  .  . "
+    ".  .  .  HD HD HD .  .  . "
+    ".  .  .  HD HD HD .  .  . "
+    "LA LA CH CH CH CH CH RA RA"
+    "LA LA CH CH CH CH CH RA RA"
+    "LA LA CH CH CH CH CH RA RA"
+    "LA LA .  WA WA WA .  RA RA"
+    "LA LA .  WA WA WA .  RA RA"
+    "LA LA .  WA WA WA .  RA RA"
+    "LA LA .  PV PV PV .  RA RA"
+    "LA LA .  PV PV PV .  RA RA"
+    "LH .  LL LL .  RR RR .  RH"
+    "LH .  LL LL .  RR RR .  RH"
+    ".  .  LL LL .  RR RR .  . "
+    ".  .  LL LL .  RR RR .  . "
+    ".  .  LL LL .  RR RR .  . "
+    ".  .  LF LF .  RF RF .  . "
+    ".  .  LF LF .  RF RF .  . ";
+
+}
+.head           {grid-area: HD;}
+.chest          {grid-area: CH;}
+.leftArm        {grid-area: LA;}
+.rightArm       {grid-area: RA;}
+.leftHand       {grid-area: LH;}
+.rightHand      {grid-area: RH;}
+.waist          {grid-area: WA;}
+.pelvis         {grid-area: PV;}
+.leftLeg        {grid-area: LL;}
+.rightLeg       {grid-area: RR;}
+.leftFoot       {grid-area: LF;}
+.rightFoot      {grid-area: RF;}
+.programs       {grid-area: PR;}
+
+.skills {
+  margin: 0 auto;
+  border: 1px solid black;
+  min-width: 5%;
+  min-height: 50%;
+  text-align: center;
+}
+.headSlot, .faceSlot, .backSlot,
+.torsoSlot, .armsSlot, .leftHandSlot,
+.rightHandSlot, .legsSlot, .footwearSlot {
+  margin: 0 auto;
+  border: 1px solid black;
+  min-width: 5%;
+  min-height: 50%;
+  text-align: center;
+}
+.head, .chest, .leftArm,
+.rightArm, .leftHand, .rightHand,
+.waist, .pelvis, .leftLeg,
+.rightLeg, .leftFoot, .rightFoot {
+  margin: 0 auto;
+  border: 1px solid black;
+  min-width: 5%;
+  min-height: 50%;
+  text-align: center;
+}
+.programs {
+  margin: 0 auto;
+  border: 1px solid black;
+  min-width: 5%;
+  min-height: 50%;
+  text-align: center;
 }
