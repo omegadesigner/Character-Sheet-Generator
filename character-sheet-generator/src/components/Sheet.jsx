@@ -18,19 +18,52 @@ class Sheet extends Component {
         return (
             <div className="sheetLayout">
                 <div id="CharacterHeader" className="sheetHeaderLayout">
-                    <h3 className="name">Character Name</h3>
-                    <h4 className="race">Race</h4>
-                    <h4 className="class">Class</h4>
-                    <h4 className="level">Level</h4>
+                    <div className="name">
+                        <h3>Character Name</h3>
+                        <input className="headerInput"/>
+                    </div>
+                    <div className="race">
+                        <h4>Race</h4>
+                        <input className="headerInput"/>
+                    </div>
+                    <div className="class">
+                        <h4>Class</h4>
+                        <input className="headerInput"/>
+                    </div>
+                    <div className="level">
+                        <h4>Level</h4>
+                        <input className="headerInput"/>
+                    </div>
                 </div>
                 <div id="CharacterStats" className="sheetStatLayout">
-                    <h4 className="str">STR</h4>
-                    <h4 className="dex">DEX</h4>
-                    <h4 className="mat">MAT</h4>
-                    <h4 className="tech">TECH</h4>
-                    <h4 className="int">INT</h4>
-                    <h4 className="cha">CHA</h4>
-                    <h4 className="health">HEALTH</h4>
+                    <div className="str">
+                        <h4>STR</h4>
+                        <input className="statsInput"/>
+                    </div>
+                    <div className="dex">
+                        <h4>DEX</h4>
+                        <input className="statsInput"/>
+                    </div>
+                    <div className="mat">
+                        <h4>MAT</h4>
+                        <input className="statsInput"/>
+                    </div>
+                    <div className="tech">
+                        <h4>TECH</h4>
+                        <input className="statsInput"/>
+                    </div>
+                    <div className="int">
+                        <h4>INT</h4>
+                        <input className="statsInput"/>
+                    </div>
+                    <div className="cha">
+                        <h4>CHA</h4>
+                        <input className="statsInput"/>
+                    </div>
+                    <div className="health">
+                        <h4>HEALTH</h4>
+                        <input className="statsInput"/>
+                    </div>
                 </div>
                 <div id="CharacterOptions">
                     <Route path="/build">

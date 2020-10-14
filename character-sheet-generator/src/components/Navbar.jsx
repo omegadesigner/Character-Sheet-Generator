@@ -11,10 +11,14 @@ class Navbar extends Component {
     render()
     {
         return (
-            <div>
-                <Link to="/create-new"><button>Create New</button></Link>
+            <div className="navbarLayout">
+                <Link to="/create-new" className="navLink">
+                    <button className="navButton">Create New</button>
+                </Link>
                 {this.props.sampleSheets.map((sampleSheet) => 
-                    <Link to={`/${sampleSheet.fields.class}`}><button>{sampleSheet.fields.class}</button></Link>
+                    <Link to={`/${sampleSheet.fields.class}`} className="navLink">
+                        <button className="navButton">{sampleSheet.fields.class}</button>
+                    </Link>
                 )}
             </div>
         );

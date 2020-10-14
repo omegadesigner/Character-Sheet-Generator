@@ -11,11 +11,19 @@ class Navbar extends Component {
     render()
     {
         return (
-            <div>
-                <Link to="/build"><button>View Build</button></Link>
-                <Link to="/info"><button>View Info</button></Link>
-                <Link to="/notes"><button>View Notes</button></Link>
-                <Link to=""><button>Save Sheet</button></Link>
+            <div className="optionsLayout">
+                <Link to="/build" className="optionsLink">
+                    <button className="optionsButton">View Build</button>
+                </Link>
+                <Link to="/info" className="optionsLink">
+                    <button className="optionsButton">View Info</button>
+                </Link>
+                <Link to="/notes" className="optionsLink">
+                    <button className="optionsButton">View Notes</button>
+                </Link>
+                <Link to="" className="optionsLink">
+                    <button className="optionsButton">Save Sheet</button>
+                </Link>
             </div>
         );
     }
