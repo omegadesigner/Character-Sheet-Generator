@@ -15,8 +15,8 @@ class Navbar extends Component {
                 <Link to="/create-new" className="navLink">
                     <button className="navButton">Create New</button>
                 </Link>
-                {this.props.sampleSheets.map((sampleSheet) => 
-                    <Link to={`/${sampleSheet.fields.class}`} className="navLink">
+                {this.props.sampleSheets.map((sampleSheet, index) => 
+                    <Link key={index} to={`/${sampleSheet.fields.class}`} className="navLink">
                         <button className="navButton">{sampleSheet.fields.class}</button>
                     </Link>
                 )}

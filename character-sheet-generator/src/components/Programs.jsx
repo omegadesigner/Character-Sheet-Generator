@@ -11,7 +11,17 @@ class Programs extends Component {
     {
         return (
             <div>
-
+                {this.props.programs.map((program, index) =>
+                <select 
+                    key={index} 
+                    className="programsList"
+                    defaultValue="default">
+                    <option value="default"></option>
+                    {this.props.programs.map((program) =>
+                    <option key={program.id}>{program.fields.programName}</option>
+                    )}
+                </select>
+                )}
             </div>
         );
     }

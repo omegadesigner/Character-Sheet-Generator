@@ -1,91 +1,151 @@
 import React, {Component} from 'react';
+import Skills from './Skills'
+import Programs from './Programs'
 
 class Build extends Component {
     constructor(props)
     {
         super(props);
         this.state = {
+            headGear: []
         }
+    }
+    getEquipment()
+    {
+        let headGearTemp = this.props.equipment.map((item) => 
+        {
+            if(item.fields.equipSlot === "headSlot")
+            {
+                return item
+            }
+            else
+            {
+                return "waka"
+            }
+        })
+        this.setState({headGear: headGearTemp}) 
+        // console.log(this.props.equipment)
+        // console.log(this.props.equipment.filter((item) => item.fields.equipSlot))
+        // console.log(this.state.headGear)
     }
     render()
     {
         return (
             <div className="buildLayout">
                 <div id="SkillsList" className="skillsLayout">
-                    <h4 className="skills">Skills</h4>
+                    <div className="skills">
+                        Skills
+                        <Skills />
+                    </div>
                 </div>
                 <div id="EquipmentList" className="equipmentLayout">
                     <div className="headSlot">
                         Head Gear
-                        <input 
+                        <select 
                             id="HeadGear"
                             className="equipmentInput"
-                            value="Helmet  +2"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="faceSlot">
                         Face Gear
-                        <input 
+                        <select 
                             id="FaceGear"
                             className="equipmentInput"
-                            value="Visor    +1"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="backSlot">
                         On Back
-                        <input 
+                        <select 
                             id="OnBack"
                             className="equipmentInput"
-                            value="Backpack"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="torsoSlot">
                         Torso
-                        <input 
+                        <select 
                             id="Torso"
                             className="equipmentInput"
-                            value="Jacket   +4"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="armsSlot">
                         Arms
-                        <input 
+                        <select 
                             id="Arms"
                             className="equipmentInput"
-                            value="Wire Jacks"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="leftHandSlot">
                         Left Hand
-                        <input 
+                        <select 
                             id="LeftHand"
                             className="equipmentInput"
-                            value="Scanner +2"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="rightHandSlot">
                         Right Hand
-                        <input 
+                        <select 
                             id="RightHand"
                             className="equipmentInput"
-                            value="Pistol    +1"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="legsSlot">
                         Legs
-                        <input 
+                        <select 
                             id="Legs"
                             className="equipmentInput"
-                            value="Pants    +3"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="footwearSlot">
                         Footwear
-                        <input 
+                        <select 
                             id="Footwear"
                             className="equipmentInput"
-                            value="Boots    +4"
-                        />
+                            defaultValue="default">
+                            <option value="default"></option>
+                        {this.props.equipment.map((item) =>
+                            <option key={item.id}>{item.fields.itemName}</option>
+                        )}
+                        </select>
                     </div>
                 </div>
                 <div id="BodyView" className="bodyLayout">
@@ -103,7 +163,10 @@ class Build extends Component {
                     <div className="rightFoot"></div>
                 </div>
                 <div id="ProgramsList" className="programsLayout">
-                    <h4 className="programs">Programs</h4>
+                    <div className="programs">
+                        Programs
+                        <Programs programs={this.props.programs}/>
+                    </div>
                 </div>
             </div>
         );

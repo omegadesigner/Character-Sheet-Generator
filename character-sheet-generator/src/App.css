@@ -12,7 +12,7 @@
   max-width: 90vw;
   min-height: 90vw;
   grid-gap: 10px;
-  margin: 0 auto;
+  margin: 10px auto;
   grid-template-columns: 1fr 1fr 4fr;
   grid-template-rows: repeat(5, 1fr) repeat(3, 1fr);
   grid-template-areas: 
@@ -86,6 +86,17 @@
   min-height: 100%;
 }
 
+.createdSheets {
+  overflow-y: scroll;
+}
+.createdSheetsList {
+  display: flex;
+  margin: 0 auto;
+  margin-right: 20px;
+  justify-content: space-between;
+  
+}
+
 .sheetLayout {
   display: grid;
   min-width: 100%;
@@ -147,6 +158,9 @@
   min-width: 90%;
   min-height: 90%;
   text-align: center;
+}
+.skillsList {
+  text-align: left;
 }
 
 .equipmentLayout {
@@ -220,8 +234,9 @@ input {
 .waist, .pelvis, .leftLeg,
 .rightLeg, .leftFoot, .rightFoot {
   margin: 0 auto;
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 15px;
+  background-color: aliceblue;
   min-width: 90%;
   max-width: 90%;
   min-height: 95%;
@@ -243,4 +258,16 @@ input {
   min-height: 90%;
   max-height: 90%;
   text-align: center;
+}
+.programsList {
+  min-width: 90%;
+  max-width: 90%;
+  margin-top: 40px;
+}
+
+.infoLayout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  grid-template-rows: 1fr;
 }

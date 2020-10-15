@@ -19,7 +19,7 @@ class Skills extends Component {
                 Resistence: "mat",
                 Perception: "int",
                 Persuasion: "cha",
-                SlightOfHand: "dex",
+                SleightOfHand: "dex",
                 Stealth: "dex"
             }
         }
@@ -28,7 +28,9 @@ class Skills extends Component {
     {
         return (
             <div>
-
+                {Object.keys(this.state.skillList).map((skill, index) =>
+                <h4 key={index}className="skillsList">{skill}</h4>
+                )}
             </div>
         );
     }
