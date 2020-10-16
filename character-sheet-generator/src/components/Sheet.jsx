@@ -19,7 +19,8 @@ class Sheet extends Component {
             mat: "10",
             tech: "10",
             int: "10",
-            cha: "10"
+            cha: "10",
+            currentHP: ""
         }
     }
 
@@ -189,9 +190,12 @@ class Sheet extends Component {
                     </div>
                     <div className="health">
                         <h4>HEALTH</h4>
-                        <h2>25 / 25</h2>
+                        <h2>{this.state.currentHP + "/" + (10 + ((8 + Math.floor((this.state.mat - 10) / 2)) * this.state.level))}</h2>
                         <input 
                             className="stats-input"
+                            name="currentHP"
+                            value={this.currentHP}
+                            onChange={(event) => this.setState({currentHP: event.target.value})}
                         />
                     </div>
                 </div>
