@@ -4,7 +4,6 @@ import axios from 'axios'
 import Build from "./Build"
 import Info from "./Info"
 import Notes from "./Notes"
-// import Skills from "./Skills"
 
 class Sheet extends Component {
     constructor(props)
@@ -14,7 +13,13 @@ class Sheet extends Component {
             name: "Test",
             race: "",
             characterClass: "",
-            level: ""
+            level: "",
+            str: "10",
+            dex: "10",
+            mat: "10",
+            tech: "10",
+            int: "10",
+            cha: "10"
         }
     }
 
@@ -124,38 +129,70 @@ class Sheet extends Component {
                 <div id="CharacterStats" className="sheet-stat-layout">
                     <div className="str">
                         <h4>STR</h4>
-                        <h2>10</h2>
-                        <input className="stats-input"/>
+                        <h2>{this.state.str}</h2>
+                        <input 
+                            className="stats-input"
+                            name="str"
+                            value={this.str}
+                            onChange={(event) => this.setState({str: event.target.value})}
+                        />
                     </div>
                     <div className="dex">
                         <h4>DEX</h4>
-                        <h2>10</h2>
-                        <input className="stats-input"/>
+                        <h2>{this.state.dex}</h2>
+                        <input 
+                            className="stats-input"
+                            name="dex"
+                            value={this.dex}
+                            onChange={(event) => this.setState({dex: event.target.value})}
+                        />
                     </div>
                     <div className="mat">
                         <h4>MAT</h4>
-                        <h2>10</h2>
-                        <input className="stats-input"/>
+                        <h2>{this.state.mat}</h2>
+                        <input 
+                            className="stats-input"
+                            name="mat"
+                            value={this.mat}
+                            onChange={(event) => this.setState({mat: event.target.value})}
+                        />
                     </div>
                     <div className="tech">
                         <h4>TECH</h4>
-                        <h2>10</h2>
-                        <input className="stats-input"/>
+                        <h2>{this.state.tech}</h2>
+                        <input 
+                            className="stats-input"
+                            name="tech"
+                            value={this.tech}
+                            onChange={(event) => this.setState({tech: event.target.value})}
+                        />
                     </div>
                     <div className="int">
                         <h4>INT</h4>
-                        <h2>10</h2>
-                        <input className="stats-input"/>
+                        <h2>{this.state.int}</h2>
+                        <input 
+                            className="stats-input"
+                            name="int"
+                            value={this.int}
+                            onChange={(event) => this.setState({int: event.target.value})}
+                        />
                     </div>
                     <div className="cha">
                         <h4>CHA</h4>
-                        <h2>10</h2>
-                        <input className="stats-input"/>
+                        <h2>{this.state.cha}</h2>
+                        <input 
+                            className="stats-input"
+                            name="cha"
+                            value={this.cha}
+                            onChange={(event) => this.setState({cha: event.target.value})}
+                        />
                     </div>
                     <div className="health">
                         <h4>HEALTH</h4>
                         <h2>25 / 25</h2>
-                        <input className="stats-input"/>
+                        <input 
+                            className="stats-input"
+                        />
                     </div>
                 </div>
                 <div id="CharacterOptions">
@@ -163,6 +200,12 @@ class Sheet extends Component {
                         <Build
                             equipment={this.props.equipment}
                             programs={this.props.programs}
+                            str={this.state.str}
+                            dex={this.state.dex}
+                            mat={this.state.mat}
+                            tech={this.state.tech}
+                            int={this.state.int}
+                            cha={this.state.cha}
                         />
                     </Route>
                     <Route path="/info">

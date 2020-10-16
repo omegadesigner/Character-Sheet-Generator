@@ -24,9 +24,6 @@ class Build extends Component {
             }
         })
         this.setState({headGear: headGearTemp}) 
-        // console.log(this.props.equipment)
-        // console.log(this.props.equipment.filter((item) => item.fields.equipSlot))
-        // console.log(this.state.headGear)
     }
     render()
     {
@@ -35,7 +32,14 @@ class Build extends Component {
                 <div id="SkillsList" className="skills-layout">
                     <div className="skills">
                         Skills
-                        <Skills />
+                        <Skills 
+                            str={this.props.str}
+                            dex={this.props.dex}
+                            mat={this.props.mat}
+                            tech={this.props.tech}
+                            int={this.props.int}
+                            cha={this.props.cha}
+                        />
                     </div>
                 </div>
                 <div id="EquipmentList" className="equipment-layout">

@@ -22,9 +22,8 @@ class App extends Component {
     this.handleUpdate = this.handleUpdate.bind(this)
   }
 
-  async grabRulebook()
+  async grabRulebook() // Credit to Soleil for this awesome code
   {
-    //const tables = Object.keys(this.state)
     const tables = [ "programs", "equipment", "weapons", "sampleSheets", "classes", "races", "createdSheets" ]
     console.log(tables)
     const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/`;
