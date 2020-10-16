@@ -11,8 +11,26 @@ class Info extends Component {
     {
         return (
             <div className="info-layout">
-                <h1>Info</h1>
-                <input type="text" className="info-input"></input>
+                <div>
+                    <h2>BackGround</h2>
+                    <input type="text" className="info-input"></input>
+                </div>
+                <div>
+                    <h2>Class/Race Bonus</h2>
+                    <input type="text" className="info-input"></input>
+                </div>
+                <div>
+                    <h2>Special Equipment</h2>
+                    <input type="text" className="info-input"></input>
+                </div>
+                <div>
+                    <h2>Languages</h2>
+                    <input type="text" className="info-input"></input>
+                </div>
+                <div>
+                    <h2>Feats/Skill Bonus</h2>
+                    <input type="text" className="info-input"></input>
+                </div>
             </div>
         );
     }

@@ -10,8 +10,9 @@ class Notes extends Component {
     render()
     {
         return (
-            <div>
+            <div className="notes-layout">
                 <h1>Notes</h1>
+                <input type="text" className="notes-input"></input>
             </div>
         );
     }

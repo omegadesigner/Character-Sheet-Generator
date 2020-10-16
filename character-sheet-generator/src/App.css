@@ -301,7 +301,20 @@ input {
   display: grid;
   min-width: 100%;
   min-height: 100%;
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
+.info-input {
+  min-height: 50%;
+}
+
+.notes-layout {
+  display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  grid-template-rows: 1fr 10fr;
+}
+.notes-input {
+  min-height: 80%;
 }
 
 @media only screen and (max-width: 980px) {
