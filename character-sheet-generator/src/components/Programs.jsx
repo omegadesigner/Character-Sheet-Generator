@@ -14,7 +14,7 @@ class Programs extends Component {
                 {this.props.programs.map((program, index) =>
                 <select 
                     key={index} 
-                    className="programsList"
+                    className="programs-list"
                     defaultValue="default">
                     <option value="default"></option>
                     {this.props.programs.map((program) =>

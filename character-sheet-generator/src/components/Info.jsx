@@ -10,8 +10,9 @@ class Info extends Component {
     render()
     {
         return (
-            <div className="infoLayout">
+            <div className="info-layout">
                 <h1>Info</h1>
+                <input type="text" className="info-input"></input>
             </div>
         );
     }

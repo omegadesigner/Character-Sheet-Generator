@@ -29,7 +29,7 @@ class Skills extends Component {
         return (
             <div>
                 {Object.keys(this.state.skillList).map((skill, index) =>
-                <h4 key={index}className="skillsList">{skill}</h4>
+                <h4 key={index}className="skills-list">{skill}<h2 className="skills-list-numbers">+0</h2></h4>
                 )}
             </div>
         );

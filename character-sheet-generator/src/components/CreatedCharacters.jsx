@@ -21,20 +21,19 @@ class CreatedCharacters extends Component {
             }
         })
         this.props.update()
-        //this.forceUpdate();
     }
 
     render()
     {
         return (
-            <div className="createdSheets">
+            <div className="created-sheets">
                 <ul>
                     {this.props.createdSheets.map((sheet) =>
-                        <li key={sheet.id} className="createdSheetsList">
-                            <strong>{sheet.fields.characterName}</strong>
+                        <li key={sheet.id} className="created-sheets-list">
+                            <strong className="character-name">{sheet.fields.characterName}</strong>
                             <div>{sheet.fields.race} {sheet.fields.class}</div>
-                            <strong>{sheet.fields.characterLevel}</strong>
-                            <button onClick={() => this.handleDelete(sheet.id)}>Delete</button>
+                            <strong className="character-level">{sheet.fields.characterLevel}</strong>
+                            <button onClick={() => this.handleDelete(sheet.id)}>✗</button>
                         </li>
                     )}
                 </ul>

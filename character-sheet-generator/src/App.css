@@ -7,7 +7,7 @@
   display: grid;
 }
 
-.appLayout {
+.app-layout {
   display: grid;
   max-width: 90vw;
   min-height: 90vw;
@@ -30,7 +30,7 @@
 #CreatedCharacters  {grid-area: CC;}
 #CharacterSheet     {grid-area: CS;}
 
-.navbarLayout{
+.navbar-layout{
   display: grid;
   min-width: 100%;
   min-height: 100%;
@@ -38,7 +38,7 @@
   padding-top: 20px;
   grid-template-rows: repeat(5, 1fr);
 }
-.navLink {
+.nav-link {
   display: flex;
   margin: 0 auto;
   border: 1px solid black;
@@ -52,13 +52,13 @@
   align-items: center;
   text-decoration: none;
 }
-.navButton {
+.nav-button {
   margin: 0 auto;
   min-width: 100%;
   min-height: 100%;
  }
 
-.optionsLayout {
+.options-layout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
@@ -66,7 +66,7 @@
   padding-top: 20px;
   grid-template-rows: repeat(4, 1fr);
 }
-.optionsLink {
+.options-link {
   display: flex;
   margin: 0 auto;
   border: 1px solid black;
@@ -80,24 +80,34 @@
   align-items: center;
   text-decoration: none;
 }
-.optionsButton {
+.options-button {
   margin: 0 auto;
   min-width: 100%;
   min-height: 100%;
 }
 
-.createdSheets {
+.created-sheets {
   overflow-y: scroll;
 }
-.createdSheetsList {
+.created-sheets-list {
   display: flex;
   margin: 0 auto;
   margin-right: 20px;
   justify-content: space-between;
   
 }
+.created-sheets-list .character-name {
+  flex: 3;
+}
+.created-sheets-list div {
+  flex: 5;
+}
+.created-sheets-list .character-level {
+  flex: 1;
+  text-align: center;
+}
 
-.sheetLayout {
+.sheet-layout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
@@ -105,7 +115,7 @@
   grid-template-rows: 1fr 1fr 8fr;
 }
 
-.sheetHeaderLayout {
+.sheet-header-layout {
   min-width: 100%;
   min-height: 100%;
   margin: 0 auto;
@@ -114,15 +124,26 @@
 
 .name, .race, .class, .level {
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 50px;
   border-bottom: 2px solid black;
   min-width: 100%;
+}
+.name h3 {
+  margin: 0 auto;
+}
+.race h4, .class h4, .level h4 {
+  margin: 0 auto;
+  padding-top: 3px;
+}
+.header-input {
+  margin: 0 auto;
+  margin-top: 40px;
 }
 .race, .class, .level {
   text-align: center;
 }
 
-.sheetStatLayout {
+.sheet-stat-layout {
   min-width: 100%;
   min-height: 100%;
   margin: 0 auto;
@@ -138,7 +159,7 @@
   text-align: center;
 }
 
-.buildLayout {
+.build-layout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
@@ -146,7 +167,7 @@
   grid-template-columns: 1fr 1fr 3fr 1fr;
 }
 
-.skillsLayout {
+.skills-layout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
@@ -156,21 +177,27 @@
   margin: 0 auto;
   border: 1px solid black;
   min-width: 90%;
+  max-width: 90%;
   min-height: 90%;
   text-align: center;
 }
-.skillsList {
+.skills-list {
+  margin: 0 auto;
   text-align: left;
 }
+.skills-list-numbers {
+  margin: 0 auto;
+  text-align: right;
+}
 
-.equipmentLayout {
+.equipment-layout {
   min-width: 100%;
   min-height: 100%;
   grid-template-rows: repeat(9, 1fr);
 }
-.headSlot, .faceSlot, .backSlot,
-.torsoSlot, .armsSlot, .leftHandSlot,
-.rightHandSlot, .legsSlot, .footwearSlot {
+.head-slot, .face-slot, .back-slot,
+.torso-slot, .arms-slot, .left-hand-slot,
+.right-hand-slot, .legs-slot, .footwear-slot {
   margin: 0 auto;
   border: 1px solid black;
   min-width: 90%;
@@ -179,14 +206,19 @@
   max-height: 90%;
   text-align: center;
 }
+.equipment-input {
+  min-width: 90%;
+  max-width: 90%;
+  margin-top: 40px;
+}
 input {
   width: 90%;
   padding-bottom: 0px;
   padding-top: 0px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
-.bodyLayout {
+.body-layout {
   min-width: 90%;
   max-width: 90%;
   min-height: 90%;
@@ -218,21 +250,21 @@ input {
 }
 .head           {grid-area: HD;}
 .chest          {grid-area: CH;}
-.leftArm        {grid-area: LA;}
-.rightArm       {grid-area: RA;}
-.leftHand       {grid-area: LH;}
-.rightHand      {grid-area: RH;}
+.left-arm        {grid-area: LA;}
+.right-arm       {grid-area: RA;}
+.left-hand       {grid-area: LH;}
+.right-hand      {grid-area: RH;}
 .waist          {grid-area: WA;}
 .pelvis         {grid-area: PV;}
-.leftLeg        {grid-area: LL;}
-.rightLeg       {grid-area: RR;}
-.leftFoot       {grid-area: LF;}
-.rightFoot      {grid-area: RF;}
+.left-leg        {grid-area: LL;}
+.right-leg       {grid-area: RR;}
+.left-foot       {grid-area: LF;}
+.right-foot      {grid-area: RF;}
 
-.head, .chest, .leftArm,
-.rightArm, .leftHand, .rightHand,
-.waist, .pelvis, .leftLeg,
-.rightLeg, .leftFoot, .rightFoot {
+.head, .chest, .left-arm,
+.right-arm, .left-hand, .right-hand,
+.waist, .pelvis, .left-leg,
+.right-leg, .left-foot, .right-foot {
   margin: 0 auto;
   border: 3px solid black;
   border-radius: 15px;
@@ -244,7 +276,7 @@ input {
   text-align: center;
 }
 
-.programsLayout {
+.programs-layout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
@@ -259,15 +291,92 @@ input {
   max-height: 90%;
   text-align: center;
 }
-.programsList {
+.programs-list {
   min-width: 90%;
   max-width: 90%;
   margin-top: 40px;
 }
 
-.infoLayout {
+.info-layout {
   display: grid;
   min-width: 100%;
   min-height: 100%;
   grid-template-rows: 1fr;
+}
+
+@media only screen and (max-width: 980px) {
+  #BodyView {
+    display: none;
+  }
+  .app-layout {
+    display: grid;
+    max-width: 90vw;
+    min-height: 90vw;
+    grid-gap: 10px;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-rows: repeat(3, 1fr) 1fr 1fr;
+    grid-template-areas:
+    "NB OP CS CS CS CS"
+    "NB OP CS CS CS CS"
+    "NB OP CS CS CS CS"
+    "CC CC CS CS CS CS"
+    "CC CC CS CS CS CS"
+  }
+  .build-layout {
+    display: grid;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .app-layout {
+    display: grid;
+    max-width: 90vw;
+    min-height: 90vw;
+    grid-gap: 10px;
+    margin: 10px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr repeat(8, 1fr) 1fr 1fr;
+    grid-template-areas:
+      "NB NB NB NB"
+      "OP OP OP OP"
+      "CS CS CS CS"
+      "CS CS CS CS"
+      "CS CS CS CS"
+      "CS CS CS CS"
+      "CS CS CS CS"
+      "CS CS CS CS"
+      "CS CS CS CS"
+      "CS CS CS CS"
+      "CC CC CC CC"
+      "CC CC CC CC"
+  }
+  .navbar-layout{
+    display: grid;
+    min-width: 100%;
+    margin: 0 auto;
+    padding-top: 0px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .nav-link {
+    max-height: 70%;
+  }
+
+  .options-layout {
+    display: grid;
+    min-width: 100%;
+    margin: 0 auto;
+    padding-top: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .options-link {
+    max-height: 70%;
+  }
 }

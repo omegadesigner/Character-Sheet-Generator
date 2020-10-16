@@ -11,13 +11,13 @@ class Navbar extends Component {
     render()
     {
         return (
-            <div className="navbarLayout">
-                <Link to="/create-new" className="navLink">
-                    <button className="navButton">Create New</button>
+            <div className="navbar-layout">
+                <Link to="/create-new" className="nav-link">
+                    <button className="nav-button">New Sheet</button>
                 </Link>
                 {this.props.sampleSheets.map((sampleSheet, index) => 
-                    <Link key={index} to={`/${sampleSheet.fields.class}`} className="navLink">
-                        <button className="navButton">{sampleSheet.fields.class}</button>
+                    <Link key={index} to={`/${sampleSheet.fields.class}`} className="nav-link">
+                        <button className="nav-button">{sampleSheet.fields.class}</button>
                     </Link>
                 )}
             </div>

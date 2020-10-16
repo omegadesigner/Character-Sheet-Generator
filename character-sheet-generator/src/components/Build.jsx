@@ -31,19 +31,19 @@ class Build extends Component {
     render()
     {
         return (
-            <div className="buildLayout">
-                <div id="SkillsList" className="skillsLayout">
+            <div className="build-layout">
+                <div id="SkillsList" className="skills-layout">
                     <div className="skills">
                         Skills
                         <Skills />
                     </div>
                 </div>
-                <div id="EquipmentList" className="equipmentLayout">
-                    <div className="headSlot">
+                <div id="EquipmentList" className="equipment-layout">
+                    <div className="head-slot">
                         Head Gear
                         <select 
                             id="HeadGear"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -51,11 +51,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="faceSlot">
+                    <div className="face-slot">
                         Face Gear
                         <select 
                             id="FaceGear"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -63,11 +63,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="backSlot">
+                    <div className="back-slot">
                         On Back
                         <select 
                             id="OnBack"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -75,11 +75,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="torsoSlot">
+                    <div className="torso-slot">
                         Torso
                         <select 
                             id="Torso"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -87,11 +87,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="armsSlot">
+                    <div className="arms-slot">
                         Arms
                         <select 
                             id="Arms"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -99,11 +99,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="leftHandSlot">
+                    <div className="left-hand-slot">
                         Left Hand
                         <select 
                             id="LeftHand"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -111,11 +111,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="rightHandSlot">
+                    <div className="right-hand-slot">
                         Right Hand
                         <select 
                             id="RightHand"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -123,11 +123,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="legsSlot">
+                    <div className="legs-slot">
                         Legs
                         <select 
                             id="Legs"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -135,11 +135,11 @@ class Build extends Component {
                         )}
                         </select>
                     </div>
-                    <div className="footwearSlot">
+                    <div className="footwear-slot">
                         Footwear
                         <select 
                             id="Footwear"
-                            className="equipmentInput"
+                            className="equipment-input"
                             defaultValue="default">
                             <option value="default"></option>
                         {this.props.equipment.map((item) =>
@@ -148,21 +148,21 @@ class Build extends Component {
                         </select>
                     </div>
                 </div>
-                <div id="BodyView" className="bodyLayout">
+                <div id="BodyView" className="body-layout">
                     <div className="head"></div>
                     <div className="chest"></div>
-                    <div className="leftArm"></div>
-                    <div className="rightArm"></div>
-                    <div className="leftHand"></div>
-                    <div className="rightHand"></div>
+                    <div className="left-arm"></div>
+                    <div className="right-arm"></div>
+                    <div className="left-hand"></div>
+                    <div className="right-hand"></div>
                     <div className="waist"></div>
                     <div className="pelvis"></div>
-                    <div className="leftLeg"></div>
-                    <div className="rightLeg"></div>
-                    <div className="leftFoot"></div>
-                    <div className="rightFoot"></div>
+                    <div className="left-leg"></div>
+                    <div className="right-leg"></div>
+                    <div className="left-foot"></div>
+                    <div className="right-foot"></div>
                 </div>
-                <div id="ProgramsList" className="programsLayout">
+                <div id="ProgramsList" className="programs-layout">
                     <div className="programs">
                         Programs
                         <Programs programs={this.props.programs}/>

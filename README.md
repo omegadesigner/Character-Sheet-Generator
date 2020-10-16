@@ -1,6 +1,7 @@
 # Project Overview
 
 ## Character Sheet Generator
+[Deployed Site](https://cocky-euler-406a02.netlify.app/build)
 
 ## Project Description
 
@@ -73,11 +74,11 @@ An app that allows users to generate character sheets for various homebrew campa
 |  Day | Deliverable | Status
 |---|---| ---|
 |July 7-8| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 9| Project Approval | Incomplete
-|July 10| Populating air table / Core game rules | Incomplete
-|July 11| Initial Clickable Model / Test fields | Incomplete
-|July 12| CSS styling / Page layout | Incomplete
-|July 13| MVP | Incomplete
+|July 9| Project Approval | Complete
+|July 10| Populating air table / Core game rules | Complete
+|July 11| Initial Clickable Model / Test fields | Complete
+|July 12| CSS styling / Page layout | Complete
+|July 13| MVP | Complete
 |July 14| MVP Corrections / Post MVP | Incomplete
 |July 15| Post MVP | Incomplete
 |July 16| Presentation | Incomplete
@@ -86,17 +87,17 @@ An app that allows users to generate character sheets for various homebrew campa
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Deciding core rules | H | 3hrs| N/A | N/A |
-| Populating air table | H | 3hrs| N/A | N/A |
-| Creating Sheet components | H | 2hrs| N/A | N/A |
-| Get post functionality | H | 2hrs| N/A | N/A |
-| Route and link | H | 3hrs| N/A | N/A |
-| CSS page styling | H | 6hrs| N/A | N/A |
-| Media queries styling | L | 3hrs| N/A | N/A |
-| Creating sample sheets | M | 3hrs| N/A | N/A |
-| Calculator components | H | 4hrs| N/A | N/A |
-| Drop-down integration | H | 4hrs| N/A | N/A |
-| Total | H | 33hrs| N/A | N/A |
+| Deciding core rules | H | 3hrs| 8hrs | 8hrs |
+| Populating air table | H | 3hrs| 3hrs | 3hrs |
+| Creating Sheet components | H | 2hrs| 3hrs | 3hrs |
+| Get post functionality | H | 2hrs| 3hrs | 3hrs |
+| Route and link | H | 3hrs| 2hrs | 2hrs |
+| CSS page styling | H | 6hrs| 12hrs | 12hrs |
+| Media queries styling | L | 3hrs| 1hrs | 1hrs |
+| Creating sample sheets | M | 3hrs| 1hrs | 1hrs |
+| Calculator components | H | 4hrs| 3hrs | 3hrs |
+| Drop-down integration | H | 4hrs| 4hrs | 4hrs |
+| Total | H | 33hrs| 40hrs | 40hrs |
 
 ## SWOT Analysis
 

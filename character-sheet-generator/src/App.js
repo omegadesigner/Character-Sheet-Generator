@@ -17,9 +17,9 @@ class App extends Component {
       sampleSheets: [],
       classes: [],
       races: [],
-      createdSheets: [],
-      update: false
+      createdSheets: []
     }
+    this.handleUpdate = this.handleUpdate.bind(this)
   }
 
   async grabRulebook()
@@ -41,17 +41,15 @@ class App extends Component {
           }
         });
         this.setState({[table]: response.data.records});
-      }, 300 *(i + 1));
+      }, 200 *(i + 1));
     })
     
   }
 
   async handleUpdate()
   {
-    console.log(this.state)
-    //this.forceUpdate();
-    //await this.grabRulebook();
-    // this.setState({update: !this.update})
+    
+    await this.grabRulebook();
   }
 
   async componentDidMount()
@@ -63,16 +61,16 @@ class App extends Component {
   render()
   {
     return (
-      <div className="appLayout">
+      <div className="app-layout">
         <div id="Navbar">
           <Navbar 
             sampleSheets={this.state.sampleSheets}
-            update={this.state.update}
+            update={this.handleUpdate}
           />
         </div>
         <div id="Options">
           <Options 
-            update={this.state.update}
+            update={this.handleUpdate}
           />
         </div>
         <div id="CreatedCharacters">
